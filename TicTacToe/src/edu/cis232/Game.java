@@ -14,5 +14,9 @@ public class Game extends Application{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public MoveResult makeMove(int row,int col){
+		return MoveResult.InvalidMove;
+	}
 
 }
