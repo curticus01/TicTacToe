@@ -5,11 +5,10 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="270.0" layoutY="14.0" text="Tic Tac Toe" />
-      <GridPane layoutX="-1.0" layoutY="47.0" prefHeight="351.0" prefWidth="600.0">
+      <GridPane gridLinesVisible="true" layoutX="-1.0" layoutY="47.0" prefHeight="351.0" prefWidth="600.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -32,5 +31,7 @@
             <ImageView fitHeight="117.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
          </children>
       </GridPane>
+      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="23.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="102.0" layoutY="415.0" />
    </children>
 </AnchorPane>
