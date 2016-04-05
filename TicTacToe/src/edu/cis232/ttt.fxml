@@ -20,18 +20,19 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fitHeight="117.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="117.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
-            <ImageView fitHeight="117.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
-            <ImageView fitHeight="117.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
-            <ImageView fitHeight="117.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ImageView fitHeight="117.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <ImageView fitHeight="117.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
-            <ImageView fitHeight="117.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ImageView fitHeight="117.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <ImageView fx:id="TL" fitHeight="117.0" fitWidth="199.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="TM" fitHeight="117.0" fitWidth="199.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
+            <ImageView fx:id="TR" fitHeight="117.0" fitWidth="199.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+            <ImageView fx:id="ML" fitHeight="117.0" fitWidth="199.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
+            <ImageView fx:id="MM" fitHeight="117.0" fitWidth="199.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <ImageView fx:id="MR" fitHeight="117.0" fitWidth="199.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <ImageView fx:id="BL" fitHeight="117.0" fitWidth="199.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
+            <ImageView fx:id="BM" fitHeight="117.0" fitWidth="199.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ImageView fx:id="BR" fitHeight="117.0" fitWidth="199.0" onMouseClicked="#makeMove" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-      <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="23.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="102.0" layoutY="415.0" />
+      <ImageView fx:id="PlayerImg" fitHeight="26.0" fitWidth="26.0" layoutX="23.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="PlayerSelect" layoutX="102.0" layoutY="415.0" />
+      <Label fx:id="output" layoutX="286.0" layoutY="415.0" />
    </children>
 </AnchorPane>
