@@ -25,6 +25,7 @@ public class Game extends Application{
 	}
 	
 	public MoveResult makeMove(int row,int col){
+		
 		return MoveResult.InvalidMove;
 	}
 
