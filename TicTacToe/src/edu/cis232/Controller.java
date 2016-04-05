@@ -100,11 +100,29 @@ public class Controller {
     			break;
     			
     		case PlayerWon:
-    			output.setText(String.format("Player %s Won!",));
+    			output.setText(String.format("Player %s Won!", game.getCurrentPlayer()));
     			break;
     		
+    		case ValidMove:
+    			Image.setImage(currentImage());
+    			//Figure out who is player .. then next.
+    			break;
+    			
+    		case TieGame:
+    			output.setText("Tie Game. Play Again.");
+    			break;
     		}
     		Image.setImage(O);
     	}
+    	
     }
+    public Image currentImage(){
+		if(game.getCurrentPlayer()=="X"){
+			return X;
+		}
+		else if(game.getCurrentPlayer()=="O"){
+			return O;
+		}
+		return X;
+	}
 }
