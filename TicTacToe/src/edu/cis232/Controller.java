@@ -61,6 +61,38 @@ public class Controller {
     			row = 0;
     			col = 0;
     		}
+    		if(source==TM){
+    			row = 0;
+    			col = 1;
+    		}
+    		if(source==TR){
+    			row = 0;
+    			col = 2;
+    		}
+    		if(source==ML){
+    			row = 1;
+    			col = 0;
+    		}
+    		if(source==MM){
+    			row = 1;
+    			col = 1;
+    		}
+    		if(source==MR){
+    			row = 1;
+    			col = 2;
+    		}
+    		if(source==BL){
+    			row = 2;
+    			col = 0;
+    		}
+    		if(source==BM){
+    			row = 2;
+    			col = 1;
+    		}
+    		if(source==BR){
+    			row = 2;
+    			col = 2;
+    		}
     		game.makeMove(row, col);
     		Image.setImage(O);
     	}
