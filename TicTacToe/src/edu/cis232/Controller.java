@@ -92,7 +92,17 @@ public class Controller {
     			row = 2;
     			col = 2;
     		}
-    		game.makeMove(row, col);
+    		switch(game.makeMove(row, col)){
+    		case InvalidMove:
+    			output.setText("Invalid Move. Try Again.");
+    			//Message
+    			break;
+    			
+    		case PlayerWon:
+    			output.setText(String.format("Player %s Won!",));
+    			break;
+    		
+    		}
     		Image.setImage(O);
     	}
     }
