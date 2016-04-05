@@ -7,7 +7,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Game extends Application{
-
+	
+	public String player;
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
@@ -27,6 +29,18 @@ public class Game extends Application{
 	public MoveResult makeMove(int row,int col){
 		
 		return MoveResult.InvalidMove;
+	}
+	
+	public String getCurrentPlayer(){
+		return player;
+	}
+	public void switchCurrentPlayer(){
+		if (player == "X"){
+			player = "O";
+		}
+		else if (player == "O"){
+			player = "X";
+		}
 	}
 
 }

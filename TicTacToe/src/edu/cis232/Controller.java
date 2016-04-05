@@ -48,6 +48,7 @@ public class Controller {
     
     Game game = new Game();
     
+    
     @FXML
     void makeMove(MouseEvent event) {
     	Object source = event.getSource();
