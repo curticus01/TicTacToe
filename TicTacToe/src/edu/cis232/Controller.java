@@ -1,6 +1,7 @@
 package edu.cis232;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -48,12 +49,15 @@ public class Controller {
     
     Game game = new Game();
     
+    @FXML
+    private Button reset;
     
     @FXML
     void makeMove(MouseEvent event) {
     	Object source = event.getSource();
     	if(source instanceof ImageView){
     		ImageView Image = (ImageView) source;
+    		PlayerImg.setImage(currentImage());
     		//call game class makeMove
     		int row=0;
     		int col=0;
@@ -101,18 +105,20 @@ public class Controller {
     			
     		case PlayerWon:
     			output.setText(String.format("Player %s Won!", game.getCurrentPlayer()));
+    			Image.setImage(currentImage());
     			break;
     		
     		case ValidMove:
     			Image.setImage(currentImage());
-    			//Figure out who is player .. then next.
+    			game.switchCurrentPlayer();
+    			output.setText("");
     			break;
     			
     		case TieGame:
     			output.setText("Tie Game. Play Again.");
+    			Image.setImage(currentImage());
     			break;
     		}
-    		Image.setImage(O);
     	}
     	
     }
@@ -125,4 +131,19 @@ public class Controller {
 		}
 		return X;
 	}
+    @FXML
+    void resetGame() {
+    	game.reset();
+    	TL.setImage(null);
+    	TM.setImage(null);
+    	TR.setImage(null);
+    	ML.setImage(null);
+    	MM.setImage(null);
+    	MR.setImage(null);
+    	BL.setImage(null);
+    	BM.setImage(null);
+    	BR.setImage(null);
+    	output.setText("");
+    	PlayerImg.setImage(null);
+    }
 }
